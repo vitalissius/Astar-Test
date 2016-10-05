@@ -50,12 +50,12 @@ closeList = list()              # Закрытый список
 
 fieldWidth = 0                  # Ширина поля
 fieldLength = 0                 # Длина поля
-field = list()                  # Список ячеек, представляющий собой игровое поле
+field = list()                  # Список ячеек, представляющих собой игровое поле
 
 path = list()                   # Список ячеек представляющих собой найденный путь (если существует)
 
 
-def make_index(i: {int, Point2i}, j: int=None) -> int:      # Создание индекса для ображения к списку ячеек
+def make_index(i: {int, Point2i}, j: int=None) -> int:      # Создание индекса для обращения к списку ячеек
     if j is None:                                           # с использованием координат (имитация двумерности поля)
         return i.i * fieldLength + i.j
     else:
@@ -270,7 +270,7 @@ for e in dataSet:
         print_path()
         print()
     else:
-        print("FIle: {0}\nThe path is not found!\n".format(e.filename))
+        print("File: {0}\nThe path is not found!\n".format(e.filename))
         print_path()
         print()
     path.clear()
